@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: config.email.email,
-        pass: config.email.email.password
+        user: config.email.email_user,
+        pass: config.email.email_pass
     }
 })
 
@@ -16,17 +16,17 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = async (to, subject, text, html)=>{
               try{
-                const info = await transporter.sendEmail({
+                const info = await transporter.sendMail({
                     from: '"Coca Cola" <gaboquintana10@gmail.com>',
                     to,
-                    subjet,
+                    subject,
                     text,
                     html
                 });
 
                 return info
               } catch (error) {
-                console.log("Error sending email");
+                console.log("Error sending emailqwerty"+error);
               }
 };
 // Función para generar el HTML del correo de recuperación de contraseña
@@ -51,3 +51,6 @@ const HTMLRecoveryEmail = (code) => {
       </div>
     `;
   };
+
+  export {HTMLRecoveryEmail, sendEmail};
+  
