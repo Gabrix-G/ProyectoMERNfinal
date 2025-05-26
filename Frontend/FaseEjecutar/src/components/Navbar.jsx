@@ -13,13 +13,13 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
     <nav className="bg-gradient-to-r from-blue-900 to-purple-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Imagen de base de datos :3 */}
           <div className="flex items-center space-x-2">
             <Database className="h-8 w-8 text-white" />
             <span className="text-xl font-bold text-white">FaseEjecutar</span>
           </div>
           
-          {/* Menu Items */}
+          {/* Menu de los Items utilizados */}
           <div className="flex space-x-1">
             {menuItems.map((item) => {
               const Icon = item.icon;

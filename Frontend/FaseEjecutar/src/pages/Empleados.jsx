@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, Mail, Phone, User, Save, X } from 'lucide-react';
 
-// Simulación de API - reemplaza con tu API real
 const empleadosAPI = {
   getAll: async () => {
-    // Simula datos basados en tus capturas
+    // Simula datos basados en base de MongoDB
     return [
       {
         _id: '683473089f9210b6a904ff4a',
@@ -211,7 +210,7 @@ const Empleados = () => {
         </div>
       )}
 
-      {/* Lista de empleados */}
+      {/* Lista de empleados siguiendo la misma formula de clientes y oeliculas*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {empleados.map((empleado) => (
           <div key={empleado._id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">

@@ -223,6 +223,9 @@ const Peliculas = () => {
                 </div>
               </div>
               
+      {/* Botones de forma visual */}
+
+
               <div className="flex gap-3 pt-4">
                 <button
                   type="button"
@@ -245,7 +248,7 @@ const Peliculas = () => {
         </div>
       )}
 
-      {/* Lista de películas */}
+      {/* Aqui estara la listaaa de peliculas representadas de forma viual en la pagina */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {peliculas.map((pelicula) => (
           <div key={pelicula._id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
